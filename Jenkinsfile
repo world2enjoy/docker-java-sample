@@ -10,6 +10,7 @@ pipeline {
         stage('Build') {
               steps {
                   sh "mvn -B -DskipTests clean package"
+                  archiveArtifacts artifacts: 'target/helloworld-1.0-SNAPSHOT.jar'
             }
         }
   }
