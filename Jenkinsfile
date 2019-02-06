@@ -6,7 +6,7 @@ pipeline {
               steps {
                 echo 'Running build automation'
                 sh './gradlew build --no-daemon'
-                archiveArtifacts artifacts: 'target/helloworld-1.0-SNAPSHOT.jar'
+                archiveArtifacts artifacts: 'helloworld-1.0-SNAPSHOT.jar'
             }
         }
   }
