@@ -1,12 +1,15 @@
 pipeline {
     agent any
+   tools {
+            maven 'maven3.6.0'
+            
+        
+      }
     
     stages {
         stage('Build') {
               steps {
-                echo 'Running build automation'
-                sh './gradlew build --no-daemon'
-                archiveArtifacts artifacts: 'helloworld-1.0-SNAPSHOT.jar'
+                  sh 'mvn clean package'
             }
         }
   }
