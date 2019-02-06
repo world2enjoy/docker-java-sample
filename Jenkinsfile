@@ -19,7 +19,7 @@
                        
             steps {
                 script {
-                    app = docker.build("world2enjoy/node-app")
+                    app = docker.build("world2enjoy/java-app")
                     app.inside {
                         sh 'echo $(curl localhost:8081)'
                     }
